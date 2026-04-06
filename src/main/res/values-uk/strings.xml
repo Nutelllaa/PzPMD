@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BMW Шпалери HD</string>
+    <string name="home_title">Шпалери</string>
+    <string name="set_as_wallpaper">Встановити як шпалери</string>
+    <string name="set_wallpaper_success">Шпалери успішно встановлено</string>
+    <string name="set_wallpaper_error">Не вдалося встановити шпалери</string>
+</resources>

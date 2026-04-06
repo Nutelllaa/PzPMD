@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BMW Wallpapers HD</string>
+    <string name="home_title">Wallpapers</string>
+    <string name="set_as_wallpaper">Set as wallpaper</string>
+    <string name="set_wallpaper_success">Wallpaper set successfully</string>
+    <string name="set_wallpaper_error">Failed to set wallpaper</string>
+</resources>

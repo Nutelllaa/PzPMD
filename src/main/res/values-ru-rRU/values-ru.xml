@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BMW Обои HD</string>
+    <string name="home_title">Обои</string>
+    <string name="set_as_wallpaper">Установить как обои</string>
+    <string name="set_wallpaper_success">Обои успешно установлены</string>
+    <string name="set_wallpaper_error">Не удалось установить обои</string>
+</resources>
