@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    [cite_start]xmlns:app="http://schemas.android.com/apk/res-auto"> [cite: 100, 101]
+
+<data> [cite: 103, 116]
+<variable
+    name="user"
+[cite_start]type="com.example.view_binding.models.User" /> [cite: 119, 120]
+<import type="android.view.View"/>
+</data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="16dp">
+
+<EditText
+    android:id="@+id/editFirstName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="First Name"
+    android:text="@={user.firstName}"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+[cite_start]app:layout_constraintEnd_toEndOf="parent" /> [cite: 128]
+
+<EditText
+    android:id="@+id/editLastName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Last Name"
+    android:text="@={user.lastName}"
+    app:layout_constraintTop_toBottomOf="@id/editFirstName"
+    app:layout_constraintStart_toStartOf="parent"
+[cite_start]app:layout_constraintEnd_toEndOf="parent" /> [cite: 122]
+
+<EditText
+    android:id="@+id/editAge"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Age"
+    android:inputType="number"
+    android:text="@={`` + user.age}"
+    app:layout_constraintTop_toBottomOf="@id/editLastName"
+    app:layout_constraintStart_toStartOf="parent"
+[cite_start]app:layout_constraintEnd_toEndOf="parent" /> [cite: 130, 137, 138]
+
+<EditText
+    android:id="@+id/editPassport"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Passport Number"
+    android:text="@={user.passportNo}"
+    android:visibility="@{user.age >= 16 ? View.VISIBLE : View.GONE}"
+    app:layout_constraintTop_toBottomOf="@id/editAge"
+    app:layout_constraintStart_toStartOf="parent"
+[cite_start]app:layout_constraintEnd_toEndOf="parent" /> [cite: 151, 154]
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>
