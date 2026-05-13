@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <!-- Дозвіл на доступ до інтернету (для завантаження картинок і реклами) -->
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <!-- Дозвіл на встановлення шпалер -->
-    <uses-permission android:name="android.permission.SET_WALLPAPER" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication">
+        android:theme="@style/Theme.NotesApp"
+        android:label="NotesApp"
+        android:supportsRtl="true">
 
-        <!-- AdMob App ID (ТЕСТОВИЙ, тільки для розробки) -->
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-7782833017648262~3434206911" />
-
-        <!-- Головна активність -->
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +22,4 @@
         </activity>
 
     </application>
-
 </manifest>
-

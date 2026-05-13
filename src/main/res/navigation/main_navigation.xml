@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/notesListFragment">
+
+    <fragment
+        android:id="@+id/notesListFragment"
+        android:name="com.example.notesapp.NotesListFragment"
+        android:label="Мої нотатки">
+        <action
+            android:id="@+id/action_notesListFragment_to_createNoteFragment"
+            app:destination="@id/createNoteFragment" />
+        <action
+            android:id="@+id/action_notesListFragment_to_noteDetailsFragment"
+            app:destination="@id/noteDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createNoteFragment"
+        android:name="com.example.notesapp.CreateNoteFragment"
+        android:label="Нова нотатка" />
+
+    <fragment
+        android:id="@+id/noteDetailsFragment"
+        android:name="com.example.notesapp.NoteDetailsFragment"
+        android:label="Деталі нотатки">
+        <argument
+            android:name="noteId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
